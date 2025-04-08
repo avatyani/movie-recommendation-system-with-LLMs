@@ -1,0 +1,152 @@
+/* ---------- Global Dark Theme ---------- */
+body, .stApp {
+    background-color: #000000 !important;
+    color: #ffffff !important;
+}
+[data-testid="stSidebar"] {
+    background-color: #111111 !important;
+}
+.css-1d391kg, .stCard, .stContainer {
+    background-color: #222222 !important;
+    color: #ffffff !important;
+    border-radius: 8px !important;
+    padding: 1rem !important;
+}
+h1, h2, h3, h4, h5, h6 {
+    color: #ffffff !important;
+}
+hr {
+    border-top: 1px solid #444444 !important;
+}
+
+/* ---------- Buttons & Selectboxes ---------- */
+.stButton > button,
+.stSelectbox > div[role="combobox"] > div {
+    background-color: #333333 !important;
+    color: #ffffff !important;
+    border: none !important;
+}
+
+/* ---------- Dropdown (Selectbox) Styles ---------- */
+/* The closed selectbox (showing the selected value) */
+.stSelectbox > div[role="combobox"] > div {
+    background-color: #1f1f1f !important;   /* darker slate */
+    color: #ffffff !important;              /* bright text */
+    border: 1px solid #444444 !important;   /* subtle outline */
+    padding: 0.5rem !important;
+    border-radius: 4px !important;
+}
+
+/* The open dropdown panel */
+div[data-testid="stSelectbox"] > div[role="listbox"] {
+    background-color: #2b2b2b !important;   /* medium slate */
+    color: #ffffff !important;
+    border: 1px solid #555555 !important;
+    border-radius: 4px !important;
+    padding: 0.25rem 0 !important;
+}
+
+/* Each option */
+div[data-testid="stSelectbox"] div[role="option"] {
+    padding: 0.5rem 1rem !important;
+}
+
+/* Hover/active option */
+div[data-testid="stSelectbox"] div[role="option"]:hover {
+    background-color: #505050 !important;   /* lighter slate for hover */
+    color: #ffffff !important;
+}
+
+
+/* ---------- Inputs & Text Areas ---------- */
+.stTextInput > div > input,
+.stTextArea > div > textarea {
+    background-color: #333333 !important;
+    color: #ffffff !important;
+    border: none !important;
+}
+
+/* ---------- Tables & DataFrames ---------- */
+.stDataFrame, .stTable {
+    background-color: #222222 !important;
+    color: #ffffff !important;
+}
+
+/* ---------- Other Widgets ---------- */
+.stCheckbox > label, .stRadio > label {
+    color: #ffffff !important;
+}
+/* Larger Page title */
+.page-title {
+    color: #2980b9 !important;      /* add this */
+    font-weight: bold !important;   /* existing */
+}
+
+.movie-title{
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #C79C6E;
+}
+
+/* Larger similarity percentages */
+.similarity {
+    color: #90ee90 !important;
+    font-size: 1.3rem !important;
+    font-weight: bold !important;
+    background-color: rgba(144, 238, 144, 0.1);
+    padding: 0.3rem 0.6rem;
+    border-radius: 6px;
+    display: inline-block;
+    margin-top: 0.5rem;
+}
+
+
+.choose-movie {
+    color: #90ee90 !important;      /* Light green text */
+    font-size: 1.2rem !important;
+    font-weight: bold !important;
+    margin-bottom: 0.5rem !important;
+    display: block;
+}
+.recommendation-card {
+    background-color: #1a1a1a;
+    border-radius: 10px;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 0 0 transparent;
+}
+
+.recommendation-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 15px rgba(144, 238, 144, 0.3);
+}
+.clickable-card {
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.clickable-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 15px rgba(144, 238, 144, 0.3);
+    cursor: pointer;
+}
+button[kind="primary"] {
+    background: none !important;
+    color: transparent !important;
+    border: none !important;
+    padding: 0 !important;
+    margin: -65px 0 20px 0 !important;
+    height: 65px !important;
+    width: 100% !important;
+    position: relative;
+    z-index: 5;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
