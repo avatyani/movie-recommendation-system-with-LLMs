@@ -99,7 +99,15 @@ div[data-testid="stSelectbox"] div[role="option"]:hover {
     display: inline-block;
     margin-top: 0.5rem;
 }
+.movie-title {
+    transition: all 0.3s ease-in-out;
+    font-size: 1.4rem;
+    color: #F5F5F5;
+}
 
+.similarity {
+    transition: all 0.2s ease-in-out;
+}
 
 .choose-movie {
     color: #90ee90 !important;      /* Light green text */
