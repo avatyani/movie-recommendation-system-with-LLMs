@@ -30,7 +30,7 @@ https://movie-discovery.streamlit.app/
 4. Show movie metadata and recommendations in a user-friendly UI.
 
 ## 📁 Project Structure
-📦movie-recommendation-system-with-LLMs ┣ 📁 data/ ┃ ┗ movies_metadata.csv ┣ 📁 model/ ┃ ┗ embeddings.pkl ┣ 📄 app.py ┣ 📄 utils.py ┣ 📄 requirements.txt ┗ 📄 README.md
+📦movie-recommendation-system-with-LLMs ┣ 📁 data/ ┃ ┗ movies_data.csv ┣ 📁 model/ ┃ ┗ embeddings.pkl ┣ 📄 app.py ┣ 📄 utils.py ┣ 📄 requirements.txt ┗ 📄 README.md
 
 ## 🖥️ Getting Started
 
