@@ -147,7 +147,7 @@ def show_movie_details(df, title):
 def recommend_similar_movies(movie_name, df, combined_embeddings):
     matches = df[df['title'] == movie_name]
     if matches.empty:
-        return
+        return []
     idx = matches.index[0]
     movie = df.iloc[idx]
 
