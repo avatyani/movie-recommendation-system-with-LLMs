@@ -8,18 +8,17 @@ import numpy as np
 import requests
 import json
 import os
-from dotenv import load_dotenv
 from openai import OpenAI
-
-# Load environment variables
-load_dotenv()
 
 # Initialize OpenAI client
 @st.cache_resource
 def get_openai_client():
-    api_key = os.getenv("OPENAI_API_KEY")
+    # Diagnostic: Print available secrets keys
+    st.info(f"Available Streamlit secrets keys: {list(st.secrets.keys())}")
+
+    api_key = st.secrets["OPENAI_API_KEY"]
     if not api_key:
-        st.error("OpenAI API key not found! Please set OPENAI_API_KEY in .env file")
+        st.error("OpenAI API key not found! Please add OPENAI_API_KEY to your Streamlit Cloud secrets.")
         return None
     return OpenAI(api_key=api_key)
 

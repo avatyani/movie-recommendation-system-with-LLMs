@@ -1,0 +1,22 @@
+name: Deploy Streamlit App
+
+on:
+  push:
+    branches:
+      - ui-updates # Change this to 'main' or your desired branch if different
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest # A virtual machine provided by GitHub to run your code
+
+    steps:
+    - name: Checkout repository code
+      uses: actions/checkout@v4 # This step fetches your code from GitHub
+
+    - name: Set up Python environment
+      uses: actions/setup-python@v5 # This step configures Python on the virtual machine
+      with:
+        python-version: '3.x' # You can specify a more exact version, e.g., '3.11'
+
+    - name: Install Python dependencies
+      run: pip install -r requirements.txt # Installs all packages listed in your requirements.txt
