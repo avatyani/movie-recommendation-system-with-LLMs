@@ -1,0 +1,33 @@
+name: Deploy Streamlit App
+
+on:
+  push:
+    branches:
+      - ui-updates # Change this to 'main' or your desired branch if different
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest # A virtual machine provided by GitHub to run your code
+
+    steps:
+    - name: Checkout repository code
+      uses: actions/checkout@v4 # This step fetches your code from GitHub
+
+    - name: Set up Python environment
+      uses: actions/setup-python@v5 # This step configures Python on the virtual machine
+      with:
+        python-version: '3.x' # You can specify a more exact version, e.g., '3.11'
+
+    - name: Install Python dependencies
+      run: pip install -r requirements.txt # Installs all packages listed in your requirements.txt
+
+    - name: Run Streamlit Application (using OpenAI Key)
+      # IMPORTANT: This 'env' section is how your app gets the secret key!
+      env:
+        OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }} # This line makes your GitHub Secret available as an environment variable
+      run: streamlit run movie_recommender.py --server.port 8501 --server.enableCORS false --server.enableXsrfProtection false
+        # The above command runs your Streamlit app.
+        # --server.port 8501: Ensures it runs on the default Streamlit port.
+        # --server.enableCORS false --server.enableXsrfProtection false:
+        # These are often needed for deployment environments, especially if you're embedding or
+        # running in a non-standard setup. You might not need them depending on your hosting.
