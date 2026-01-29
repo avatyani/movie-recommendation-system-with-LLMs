@@ -13,6 +13,9 @@ from openai import OpenAI
 # Initialize OpenAI client
 @st.cache_resource
 def get_openai_client():
+    # Diagnostic: Print available secrets keys
+    st.info(f"Available Streamlit secrets keys: {list(st.secrets.keys())}")
+
     api_key = st.secrets["OPENAI_API_KEY"]
     if not api_key:
         st.error("OpenAI API key not found! Please add OPENAI_API_KEY to your Streamlit Cloud secrets.")
